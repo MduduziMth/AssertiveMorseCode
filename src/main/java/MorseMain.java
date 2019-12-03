@@ -5,9 +5,14 @@ public class MorseMain {
 
     public static void main(String[] args) {
 
-       System.out.println(( lettersToMorseCode("hi there")));
-       String morse = morseCodeToLetters("....") ;
 
+
+       String input ="hi there";
+
+        assert input.length() == lettersToMorseCode(input + "").split(" ").length: "pass";
+        System.out.println(lettersToMorseCode(input));
+
+        String morse = morseCodeToLetters(lettersToMorseCode(input)) ;
         System.out.println(morse);
     }
 
